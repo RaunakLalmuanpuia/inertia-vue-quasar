@@ -27,8 +27,8 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/quasar', function () {
-    return Inertia('Home');
-});
+    return Inertia('quasar/Index');
+})->middleware(['auth', 'verified'])->name('quasar_dashboard');
 
 
 Route::get('/', function () {

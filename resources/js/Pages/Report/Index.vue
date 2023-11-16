@@ -1,7 +1,7 @@
 <template>
     <Head title="Report" />
 
-    <AuthenticatedLayout>
+    <QuasarLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Report
@@ -117,6 +117,7 @@
                                         <option
                                             v-for="employer in employer"
                                             :value="employer"
+                                            :key="employer.id"
                                         >
                                             {{ employer.name }}
                                         </option>
@@ -372,7 +373,7 @@
                             <p>{{ $page.props.auth.user.id }}</p> -->
                             <div
                                 v-for="report in reports.data"
-                                :key="reports.id"
+                                :key="report.id"
                             >
                                 <p>{{ report.employee_id }}</p>
                                 <p>{{ $page.props.auth.user.id }}</p>
@@ -796,10 +797,10 @@
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </QuasarLayout>
 </template>
 <script setup>
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import QuasarLayout from "@/Layouts/QuasarLayout.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { Head, useForm, Link } from "@inertiajs/vue3";
 import { ref } from "vue";

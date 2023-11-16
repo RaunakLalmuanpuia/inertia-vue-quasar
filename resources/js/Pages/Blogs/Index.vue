@@ -1,12 +1,12 @@
 <template>
     <Head title="Blogs" />
 
-    <AuthenticatedLayout>
-        <template #header>
+    <QuasarLayout>
+        <!-- <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Blogs Index
             </h2>
-        </template>
+        </template> -->
         <!-- <iframe width="780" height="439" src="https://www.youtube.com/embed/pe0NLyhtchU" title="Conor McGregor (Ireland) vs Floyd Mayweather (USA) | KNOCKOUT, BOXING fight, HD, 60 fps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -31,7 +31,7 @@
                         <div
                             class="relative overflow-x-auto shadow-md sm:rounded-lg"
                         >
-                            <div class="flex items-center space-x-4 mb-4">
+                            <div class="flex items-center mb-4 space-x-4">
                                 <div class="relative inline-block w-1/3">
                                     <!--searrch -- diffrent tailwind css style for select Multiple options  -->
                                     <select
@@ -415,10 +415,10 @@
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </QuasarLayout>
 </template>
 <script setup>
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import QuasarLayout from "@/Layouts/QuasarLayout.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { Head, Link, useForm } from "@inertiajs/vue3";
 
